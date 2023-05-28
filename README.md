@@ -1,6 +1,29 @@
 # remark
 **工作繁忙无法维护，工作繁忙无法维护，工作繁忙无法维护**
 
+``` bash
+ubuntu22.04：
+
+def qt_message_handler(mode, context, message):
+    if mode == QtInfoMsg:
+     mode = 'INFO'
+    elif mode == QtWarningMsg:
+     mode = 'WARNING'
+    elif mode == QtCriticalMsg:
+     mode = 'CRITICAL'
+    elif mode == QtFatalMsg:
+     mode = 'FATAL'
+    else:
+     mode = 'DEBUG'
+
+    # 不写入到文件，改为直接打印    
+    print(message)
+    #msg = message.split("@$ff$@")
+    #if len(msg) == 2 and msg[0] == "True":
+    #    with open("/etc/v2rayL/v2rayL_op.log", "a+") as f:
+    #        f.write(' %s - %s: %s\n' % (datetime.datetime.now(), mode, msg[1]))
+```
+    
 # v2ray
 V2Ray 是 Project V 下的一个工具。Project V 包含一系列工具，帮助你打造专属的定制网络体系。而 V2Ray 属于最核心的一个。 简单地说，V2Ray 是一个与 Shadowsocks 类似的代理软件，但比Shadowsocks更具优势
 
